@@ -1,9 +1,9 @@
 package services.parse
 
 import better.files._
-import models.parse.{Importer, ProjectDefinition}
-import models.parse.parser.tree.{DeclTree, LineCommentDecl}
-import models.parse.sc.printer.{Printer, PrinterFiles, PrinterFilesMulti, PrinterFilesSingle}
+import models.parse.{ Importer, ProjectDefinition }
+import models.parse.parser.tree.{ DeclTree, LineCommentDecl }
+import models.parse.sc.printer.{ Printer, PrinterFiles, PrinterFilesMulti, PrinterFilesSingle }
 import models.parse.sc.transform.IgnoredPackages
 import services.project.ProjectService
 

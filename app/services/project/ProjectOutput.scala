@@ -50,8 +50,7 @@ case class ProjectOutput(project: ProjectDefinition, projectDir: File) extends L
     val files = Seq(
       dir / "build.sbt",
       dir / "readme.md",
-      dir / "project" / "Projects.scala"
-    )
+      dir / "project" / "Projects.scala")
     val replacements = project.asMap
     def replace(f: File) = {
       val oldContent = f.contentAsString

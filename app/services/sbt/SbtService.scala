@@ -2,7 +2,7 @@ package services.sbt
 
 import better.files._
 import services.file.FileService
-import utils.{DateUtils, Logging}
+import utils.{ DateUtils, Logging }
 
 object SbtService extends Logging {
   val jarpathTest = "/Users/kyle/Projects/Libraries/sbt-0.13/sbt-launch.jar".toFile

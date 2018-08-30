@@ -82,8 +82,7 @@ case class MultilineCommentMember(text: String) extends MemberTree
 case class TypeDecl(name: TypeName, tpe: TypeTree) extends DeclTree
 case class EnumDecl(name: TypeName, members: List[Ident]) extends DeclTree
 case class ClassDecl(
-  abst: Boolean, name: TypeName, tparams: List[TypeParam], parent: Option[TypeRefTree], impls: List[TypeRefTree], members: List[MemberTree]
-) extends DeclTree
+  abst: Boolean, name: TypeName, tparams: List[TypeParam], parent: Option[TypeRefTree], impls: List[TypeRefTree], members: List[MemberTree]) extends DeclTree
 case class InterfaceDecl(name: TypeName, tparams: List[TypeParam], inheritance: List[TypeRefTree], members: List[MemberTree]) extends DeclTree
 case class TypeAliasDecl(name: TypeName, tparams: List[TypeParam], alias: TypeTree) extends DeclTree
 case class TypeRefTree(name: BaseTypeRef, tparams: List[TypeTree] = Nil) extends TypeTree

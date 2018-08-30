@@ -18,11 +18,10 @@ object Application {
 
 @javax.inject.Singleton
 class Application @javax.inject.Inject() (
-    val config: Configuration,
-    val lifecycle: ApplicationLifecycle,
-    val playEnv: Environment,
-    val ws: WSClient
-) extends Logging {
+  val config: Configuration,
+  val lifecycle: ApplicationLifecycle,
+  val playEnv: Environment,
+  val ws: WSClient) extends Logging {
   if (Application.initialized) {
     log.info("Skipping initialization after failure.")
   } else {

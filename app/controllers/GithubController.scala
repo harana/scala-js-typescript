@@ -5,7 +5,7 @@ import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.twirl.api.Html
 import services.git.GitService
 import services.github.GithubService
-import services.project.{ProjectDetailsService, ProjectService}
+import services.project.{ ProjectDetailsService, ProjectService }
 import utils.Application
 
 import scala.concurrent.Future
@@ -74,7 +74,6 @@ class GithubController @javax.inject.Inject() (override val app: Application, gi
             val projectDir = ProjectService.projectDir(p.key)
             GitService.addRemote(projectDir)
             GitService.push(projectDir)
-            log.info(p.key + "!!!!!!!!!")
             r :+ p
           }
         }

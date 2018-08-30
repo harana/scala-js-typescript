@@ -3,7 +3,7 @@ package controllers
 import better.files.File
 import services.github.GithubService
 import services.project.ProjectService
-import services.sbt.{SbtHistoryService, SbtResultParser, SbtService}
+import services.sbt.{ SbtHistoryService, SbtResultParser, SbtService }
 import utils.Application
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 

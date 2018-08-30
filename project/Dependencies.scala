@@ -26,7 +26,7 @@ object Dependencies {
   }
 
   object Serialization {
-    val version = "0.6.5"
+    val version = "0.4.4"
     val uPickle = "com.lihaoyi" %% "upickle" % version
   }
 
@@ -37,9 +37,10 @@ object Dependencies {
   }
 
   object Metrics {
-    val version = "4.0.1"
-    val metrics = "nl.grons" %% "metrics-scala" % "3.5.6"
+    val version = "4.0.2"
+    val metrics = "nl.grons" %% "metrics-scala" % "4.0.0"
     val jvm = "io.dropwizard.metrics" % "metrics-jvm" % version
+    val jmx = "io.dropwizard.metrics" % "metrics-jmx" % version
     val ehcache = "io.dropwizard.metrics" % "metrics-ehcache" % version intransitive()
     val healthChecks = "io.dropwizard.metrics" % "metrics-healthchecks" % version intransitive()
     val json = "io.dropwizard.metrics" % "metrics-json" % version

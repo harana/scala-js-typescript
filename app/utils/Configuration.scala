@@ -1,6 +1,6 @@
 package utils
 
-import play.api.{Environment, Mode}
+import play.api.{ Environment, Mode }
 import utils.metrics.MetricsConfig
 
 @javax.inject.Singleton
@@ -25,6 +25,5 @@ class Configuration @javax.inject.Inject() (val cnf: play.api.Configuration, env
     graphiteServer,
     graphitePort,
     servletEnabled,
-    servletPort
-  )
+    servletPort)
 }

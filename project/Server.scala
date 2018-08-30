@@ -18,6 +18,7 @@ import play.routes.compiler.InjectedRoutesGenerator
 import play.sbt.PlayImport.PlayKeys
 import play.sbt.routes.RoutesKeys.routesGenerator
 import play.sbt.PlayImport.PlayKeys._
+import play.sbt.PlayImport.guice
 import sbt.Keys._
 import sbt._
 import sbtassembly.AssemblyPlugin.autoImport._
@@ -29,7 +30,7 @@ object Server {
       Akka.actor, Akka.logging, Play.playFilters, Play.playWs, Serialization.uPickle, Utils.enumeratum,
       WebJars.jquery, WebJars.fontAwesome, WebJars.materialize,
       Utils.scalaGuice, Utils.commonsIo, Utils.betterFiles,
-      Akka.testkit, Play.playTest, Testing.scalaTest
+      Akka.testkit, Play.playTest, Testing.scalaTest, guice
     )
   }
 

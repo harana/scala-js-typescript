@@ -16,48 +16,48 @@ object Logging extends Instrumented {
   def setCallback(f: (Int, String) => Unit) = callback = Some(f)
 
   case class CustomLogger(name: String) extends Logger(LoggerFactory.getLogger(name)) {
-    override def trace(message: => String) = {
+    def trace(message: => String) = {
       traceMeter.mark()
       super.trace(message)
     }
-    override def trace(message: => String, error: => Throwable) = {
+    def trace(message: => String, error: => Throwable) = {
       traceMeter.mark()
       super.trace(message, error)
     }
-    override def debug(message: => String) = {
+    def debug(message: => String) = {
       debugMeter.mark()
       super.debug(message)
     }
-    override def debug(message: => String, error: => Throwable) = {
+    def debug(message: => String, error: => Throwable) = {
       debugMeter.mark()
       super.debug(message, error)
     }
-    override def info(message: => String) = {
+    def info(message: => String) = {
       callback.foreach(_(1, message))
       infoMeter.mark()
       super.info(message)
     }
-    override def info(message: => String, error: => Throwable) = {
+    def info(message: => String, error: => Throwable) = {
       callback.foreach(_(1, message))
       infoMeter.mark()
       super.info(message, error)
     }
-    override def warn(message: => String) = {
+    def warn(message: => String) = {
       callback.foreach(_(2, message))
       warnMeter.mark()
       super.warn(message)
     }
-    override def warn(message: => String, error: => Throwable) = {
+    def warn(message: => String, error: => Throwable) = {
       callback.foreach(_(2, message))
       warnMeter.mark()
       super.warn(message, error)
     }
-    override def error(message: => String) = {
+    def error(message: => String) = {
       callback.foreach(_(3, message))
       errorMeter.mark()
       super.error(message)
     }
-    override def error(message: => String, error: => Throwable) = {
+    def error(message: => String, error: => Throwable) = {
       callback.foreach(_(3, message))
       errorMeter.mark()
       super.error(message, error)

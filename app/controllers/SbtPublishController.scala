@@ -2,8 +2,8 @@ package controllers
 
 import play.api.libs.ws.WSClient
 import services.github.GithubService
-import services.project.{ProjectDetailsService, ProjectService}
-import services.sbt.{SbtResultParser, SbtService}
+import services.project.{ ProjectDetailsService, ProjectService }
+import services.sbt.{ SbtResultParser, SbtService }
 import utils.Application
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 

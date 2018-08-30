@@ -21,14 +21,13 @@ object ProjectDefinition {
 }
 
 case class ProjectDefinition(
-    key: String,
-    name: String,
-    url: String,
-    version: String,
-    authors: String,
-    buildVersion: String = "1.1.0",
-    dependencies: Seq[String] = Nil
-) {
+  key: String,
+  name: String,
+  url: String,
+  version: String,
+  authors: String,
+  buildVersion: String = "1.1.0",
+  dependencies: Seq[String] = Nil) {
   val keyNormalized = ProjectDefinition.normalize(key)
 
   val description = s"Scala.js facades for $name $version."
@@ -54,6 +53,5 @@ case class ProjectDefinition(
     "authors" -> authors,
     "dependencies" -> dependencyString,
     "buildVersion" -> buildVersion,
-    "dependencySummary" -> dependencySummary
-  )
+    "dependencySummary" -> dependencySummary)
 }

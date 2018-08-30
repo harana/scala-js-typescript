@@ -6,5 +6,4 @@ case class MetricsConfig(
   graphiteServer: String,
   graphitePort: Int,
   servletEnabled: Boolean,
-  servletPort: Int
-)
+  servletPort: Int)

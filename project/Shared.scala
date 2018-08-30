@@ -12,7 +12,6 @@ object Shared {
   object Versions {
     val app = "1.0.0"
     val scala = "2.12.6"
-    val scalaBinary = "2.12"
   }
 
   lazy val commonSettings = Seq(
@@ -20,7 +19,7 @@ object Shared {
     scalaVersion := Shared.Versions.scala,
 
     scalacOptions ++= Seq(
-      "-encoding", "UTF-8", "-feature", "-deprecation", "-unchecked", "–Xcheck-null", "-Xfatal-warnings", "-Xlint",
+      "-encoding", "UTF-8", "-feature", "-deprecation", "-unchecked", "–Xcheck-null", "-Xlint",
       "-Ywarn-adapted-args", "-Ywarn-dead-code", "-Ywarn-inaccessible", "-Ywarn-nullary-override", "-Ywarn-numeric-widen"
     ),
     scalacOptions in Test ++= Seq("-Yrangepos"),
@@ -35,7 +34,7 @@ object Shared {
     // Code Quality
     scapegoatVersion in ThisBuild := Utils.scapegoatVersion,
     scapegoatDisabledInspections := Seq("MethodNames", "MethodReturningAny", "DuplicateImport"),
-    scapegoatIgnoredFiles := Seq(".*/JsonSerializers.scala"),
+    scapegoatIgnoredFiles := Seq(".*/JsonSerializers.scala", ".*/*.scala.html"),
     ScalariformKeys.preferences := ScalariformKeys.preferences.value
   ) ++ graphSettings ++ scalariformSettings
 

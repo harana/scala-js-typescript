@@ -2,7 +2,7 @@ package models.sandbox
 
 import enumeratum._
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
-import utils.{Application, Logging}
+import utils.{ Application, Logging }
 
 import scala.concurrent.Future
 

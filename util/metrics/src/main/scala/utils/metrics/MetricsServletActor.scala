@@ -4,10 +4,11 @@ import java.net.InetSocketAddress
 import java.util.concurrent.TimeUnit
 
 import akka.actor.Props
-import com.codahale.metrics.graphite.{Graphite, GraphiteReporter}
-import com.codahale.metrics.{MetricFilter, JmxReporter}
+import com.codahale.metrics.graphite.{ Graphite, GraphiteReporter }
+import com.codahale.metrics.MetricFilter
+import com.codahale.metrics.jmx.JmxReporter
 import com.codahale.metrics.servlets.AdminServlet
-import org.eclipse.jetty.server.{ServerConnector, Server}
+import org.eclipse.jetty.server.{ Server, ServerConnector }
 import org.eclipse.jetty.servlet.ServletContextHandler
 import utils.Logging
 
@@ -35,8 +36,7 @@ class MetricsServletActor(cfg: MetricsConfig) extends InstrumentedActor with Log
           .convertRatesTo(TimeUnit.SECONDS)
           .convertDurationsTo(TimeUnit.MILLISECONDS)
           .filter(MetricFilter.ALL)
-          .build(graphiteServer)
-      )
+          .build(graphiteServer))
       graphiteReporter.foreach(r => r.start(1, TimeUnit.MINUTES))
     }
 

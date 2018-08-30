@@ -3,7 +3,7 @@ package controllers
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.mvc._
 import utils.metrics.Instrumented
-import utils.{Application, Logging}
+import utils.{ Application, Logging }
 
 import scala.concurrent.Future
 

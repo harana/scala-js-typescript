@@ -18,8 +18,7 @@ class LoggingFilter @Inject() (override implicit val mat: Materializer) extends 
   val knownStatuses = Seq(
     Status.OK, Status.BAD_REQUEST, Status.FORBIDDEN, Status.NOT_FOUND,
     Status.CREATED, Status.TEMPORARY_REDIRECT, Status.INTERNAL_SERVER_ERROR, Status.CONFLICT,
-    Status.UNAUTHORIZED, Status.NOT_MODIFIED
-  )
+    Status.UNAUTHORIZED, Status.NOT_MODIFIED)
 
   lazy val statusCodes: Map[Int, Meter] = knownStatuses.map(s => s -> metricRegistry.meter(prefix + s.toString)).toMap
 
@@ -53,7 +52,6 @@ class LoggingFilter @Inject() (override implicit val mat: Materializer) extends 
       exception => {
         logCompleted(Results.InternalServerError)
         exception
-      }
-    )
+      })
   }
 }

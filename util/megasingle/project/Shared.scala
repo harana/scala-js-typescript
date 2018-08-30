@@ -1,4 +1,4 @@
-import com.typesafe.sbt.SbtScalariform.scalariformSettings
+//import com.typesafe.sbt.SbtScalariform.scalariformSettings
 import net.virtualvoid.sbt.graph.DependencyGraphSettings.graphSettings
 import sbt.Keys._
 import sbt._
@@ -18,7 +18,7 @@ object Shared {
     scalacOptions in Test ++= Seq("-Yrangepos"),
 
     shellPrompt := { state => s"[${Project.extract(state).currentProject.id}] $$ " }
-  ) ++ graphSettings ++ scalariformSettings
+  ) ++ graphSettings //++ scalariformSettings
 
   object Versions {
     val app = "1.0.0"

@@ -2,7 +2,7 @@ package models.parse
 
 import models.parse.sc.tree._
 import models.parse.parser.tree._
-import models.parse.sc.transform.{ExcludedMembers, Transformations}
+import models.parse.sc.transform.{ ExcludedMembers, Transformations }
 
 object Importer {
   private val AnyType = TypeRefTree(CoreType("any"))

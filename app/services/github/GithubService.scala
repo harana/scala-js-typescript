@@ -1,6 +1,6 @@
 package services.github
 
-import play.api.libs.ws.{WSAuthScheme, WSClient, WSRequest, WSResponse}
+import play.api.libs.ws.{ WSAuthScheme, WSClient, WSRequest, WSResponse }
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import upickle.Js
 import upickle.default._
@@ -84,8 +84,7 @@ case class GithubService @javax.inject.Inject() (ws: WSClient) {
   private[this] def req(page: String) = {
     val url = GithubService.baseUrl + page
     ws.url(url).withAuth("KyleU", GithubService.accessKey, WSAuthScheme.BASIC).withHeaders(
-      "User-Agent" -> "scala-js-typescript"
-    )
+      "User-Agent" -> "scala-js-typescript")
   }
 
   private[this] def trap[T](req: WSRequest, rsp: Future[WSResponse])(f: WSResponse => T) = rsp.map { response =>
