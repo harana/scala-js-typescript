@@ -6,7 +6,7 @@ object Dependencies {
   }
 
   object Play {
-    private[this] val version = "2.5.14"
+    private[this] val version = "2.6.18"
     val playLib = "com.typesafe.play" %% "play" % version
     val playFilters = play.sbt.PlayImport.filters
     val playWs = play.sbt.PlayImport.ws
@@ -15,7 +15,7 @@ object Dependencies {
   }
 
   object Akka {
-    private[this] val version = "2.4.18"
+    private[this] val version = "2.5.16"
     val actor = "com.typesafe.akka" %% "akka-actor" % version
     val remote = "com.typesafe.akka" %% "akka-remote" % version
     val logging = "com.typesafe.akka" %% "akka-slf4j" % version
@@ -26,7 +26,7 @@ object Dependencies {
   }
 
   object Serialization {
-    val version = "0.4.4"
+    val version = "0.6.5"
     val uPickle = "com.lihaoyi" %% "upickle" % version
   }
 
@@ -37,7 +37,7 @@ object Dependencies {
   }
 
   object Metrics {
-    val version = "3.2.2"
+    val version = "4.0.1"
     val metrics = "nl.grons" %% "metrics-scala" % "3.5.6"
     val jvm = "io.dropwizard.metrics" % "metrics-jvm" % version
     val ehcache = "io.dropwizard.metrics" % "metrics-ehcache" % version intransitive()
@@ -49,11 +49,10 @@ object Dependencies {
   }
 
   object Utils {
-    val scapegoatVersion = "1.3.0"
+    val scapegoatVersion = "1.3.7"
     val enumeratumVersion = "1.5.11"
 
     val commonsIo = "commons-io" % "commons-io" % "2.5"
-    val crypto = "xyz.wiedenhoeft" %% "scalacrypt" % "0.4.0"
     val enumeratum = "com.beachape" %% "enumeratum-upickle" % enumeratumVersion
     val scalaGuice = "net.codingwell" %% "scala-guice" % "4.1.0"
     val betterFiles = "com.github.pathikrit" %% "better-files" % "2.17.1"

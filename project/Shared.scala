@@ -11,7 +11,8 @@ object Shared {
 
   object Versions {
     val app = "1.0.0"
-    val scala = "2.11.11"
+    val scala = "2.12.6"
+    val scalaBinary = "2.12"
   }
 
   lazy val commonSettings = Seq(
@@ -32,7 +33,7 @@ object Shared {
     sources in (Compile,doc) := Seq.empty,
 
     // Code Quality
-    scapegoatVersion := Utils.scapegoatVersion,
+    scapegoatVersion in ThisBuild := Utils.scapegoatVersion,
     scapegoatDisabledInspections := Seq("MethodNames", "MethodReturningAny", "DuplicateImport"),
     scapegoatIgnoredFiles := Seq(".*/JsonSerializers.scala"),
     ScalariformKeys.preferences := ScalariformKeys.preferences.value

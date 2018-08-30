@@ -4,7 +4,7 @@ object Dependencies {
   }
 
   object Utils {
-    val scapegoatVersion = "1.3.0"
-    val enumeratumVersion = "1.5.6"
+    val scapegoatVersion = "1.3.7"
+    val enumeratumVersion = "1.5.13"
   }
 }

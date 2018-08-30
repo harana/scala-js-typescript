@@ -11,7 +11,7 @@ addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.2.17")
 addSbtPlugin("io.gatling" % "gatling-sbt" % "2.2.1")
 
 // Dependency Resolution
-addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-M15-1")
+addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.2")
 
 // Code Quality
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0") // scalastyle
